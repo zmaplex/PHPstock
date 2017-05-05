@@ -162,8 +162,8 @@ class Get_stock_code():
         #	self.ReadWeb(api,Decode='utf-8')'''
         for i in b:
             api = self.api.replace("??????", i[0])
-            data = self.ReadWeb(api, Decode='utf-8')
             print "抓取代码", i[0], "任务URL：", api
+            data = self.ReadWeb(api, Decode='utf-8')
             num = len(data.xpath('/html/body/div/div/table/tbody//tr'))
             mflag = 1
             while 1:
@@ -182,8 +182,7 @@ class Get_stock_code():
 
 def updatestock():
     a = Get_stock_code('http://fund.eastmoney.com/f10/FundArchivesDatas.aspx?type=jjcc&code=??????&topline=40')
-    stock = a.GetAllCode()  # 有重复项，记得去重
-
+    stock = a.GetAllCode()
     G = DB()
     G.connectDB()
     G.deleteDB("delete from scode")
@@ -218,3 +217,63 @@ def updatejj():
 
 updatejj()
 updatestock()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
+CREATE TABLE jcode (
+		code CHAR(10) NOT NULL PRIMARY KEY,
+		name CHAR(60) NOT NULL,
+		dwjz DOUBLE NOT NULL,
+		3ybdfd DOUBLE NOT NULL,
+		3ybdpj CHAR(10) NOT NULL,
+		cxfxxx DOUBLE NOT NULL,
+		cxpj CHAR(10) NOT NULL,
+		xpbl3y DOUBLE NOT NULL,
+		xppj3y CHAR(10) NOT NULL,
+		fromyl DOUBLE NOT NULL
+)DEFAULT CHARSET=utf8;
+"""
+
+"""
+CREATE TABLE scode (
+		code CHAR(10) NOT NULL PRIMARY KEY,
+		name CHAR(60) NOT NULL,
+		percent DOUBLE NOT NULL
+)DEFAULT CHARSET=utf8;
+
+"""
+
+
+# print "基金代码 基金名称 单位净值 波动幅度 评价 晨星风险系数 评价 最近三年 评价 今年以来总回报率 排名"
+# http://fund.eastmoney.com/f10/FundArchivesDatas.aspx?type=jjcc&code=000311&topline=40
+

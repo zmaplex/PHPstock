@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'SiteController@index');
+Route::get('/', 'ScodeController@orm1');
 
 Route::get('/say',function(){
 	return "hello world";

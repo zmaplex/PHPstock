@@ -1,0 +1,34 @@
+# 项目部署
+
+1、拉代码
+
+git clone foo.git
+
+2、安装依赖
+
+composer install --optimize-autoloader --no-dev
+
+composer dump-autoload --optimize
+
+3、编译前端文件
+
+gulp --production
+
+4、清理
+
+php artisan clear-compiled
+
+php artisan optimize
+
+
+
+# Centos 6 安装Python包
+
+Python  版本至少 2.7.12
+
+yum install libxslt-devel
+
+pip install MySQL-python
+
+pip install lxml
+

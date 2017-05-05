@@ -18,7 +18,11 @@
 
     @endforeach
         </table>
-    {{ $gp->links() }}
     @endif
+
+@endsection
+
+@section('footer')
+    {{ $gp->links() }}
 
 @endsection

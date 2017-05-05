@@ -43,6 +43,7 @@
     <div class="starter-template">
         @yield('content')
     </div>
+
     <div class = "row">
         <div class="col-sm-6 col-sm-offset-6">
             @yield('footer')
@@ -50,7 +51,6 @@
     </div>
 </div>
 
-@yield('footer')
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>

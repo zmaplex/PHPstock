@@ -20,18 +20,17 @@
                     <td>{{$per -> jjcode}}</td>
                     <td>{{$per -> percent}}</td>
 
-
                 </tr>
             @endforeach
         </table>
-
     @endif
 
 @endsection
 
 @section('footer')
     {{ $gp->links() }}
-    @endsection
+
+@endsection
 
 
 

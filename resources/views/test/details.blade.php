@@ -17,9 +17,13 @@
         </tr>
     @endforeach
     </table>
-    {{ $gp->links() }}
     @else
         <p>抱歉,没找到相关页面</p>
     @endif
 
 @stop
+
+
+@section('footer')
+    {{ $gp->links() }}
+@endsection

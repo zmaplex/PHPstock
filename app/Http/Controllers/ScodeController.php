@@ -12,6 +12,7 @@ class ScodeController extends Controller
     {
 
         $gp = DB::table('scode')->orderBy('gpcode','desc')->paginate(10);
+
         return view("test.stock",compact('gp'));
     }
 

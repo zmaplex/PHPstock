@@ -9,9 +9,13 @@
 	<title>股票筛选 1.0</title>
 	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<style type="text/css">
-		body{
-			padding: 80px;
-		}
+        body {
+            padding-top: 50px;
+        }
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
 	</style>
 </head>
 <body>
@@ -28,18 +32,21 @@
 		</div>
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li><a href="/orm1">1300+</a></li>
+				<li class="active" ><a href="/orm1">1300+</a></li>
 				<li><a href="/TopStock">持有最多</a></li>
 
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>
 </nav>
-<div class="container">
+<div class="container-fluid">
+    <div class="starter-template">
 	@yield('content')
-	@yield('footer')
+    </div>
 </div>
 
+@yield('footer')
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
-
 </html>

@@ -41,7 +41,12 @@
 </nav>
 <div class="container-fluid">
     <div class="starter-template">
-	@yield('content')
+        @yield('content')
+    </div>
+    <div class = "row">
+        <div class="col-sm-6 col-sm-offset-6">
+            @yield('footer')
+        </div>
     </div>
 </div>
 
